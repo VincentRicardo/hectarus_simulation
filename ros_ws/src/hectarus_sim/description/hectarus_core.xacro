@@ -1,0 +1,587 @@
+<?xml version="1.0" ?>
+<robot name="hectarus" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <material name="bodyyyy">
+    <color rgba="1 0.41176 0.38039 1"/>
+  </material>
+  <material name="pastel_red">
+    <color rgba="1 0.2 0.2 1"/>
+  </material>
+  <material name="white_grey">
+    <color rgba="0.7843 0.7843 0.7843 1"/>
+  </material>
+  <material name="grey_blue">
+    <color rgba="0.4 0.6 0.8 1.0"/>
+  </material>
+  <link name="body_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="-0.0020046181535473863 -9.053255003100136e-05 0.04648131639833217"/>
+      <mass value="2.441307695059388"/>
+      <inertia ixx="0.006236687838224564" ixy="-0.0001567417603743027" ixz="0.00020648317033835256" iyy="0.008047688835519887" iyz="-7.289620244944466e-06" izz="0.007963860512219199"/>
+    </inertial>
+    <visual name="body_link_visual">
+      <origin rpy="0.0 0.0 0.0" xyz="0.10654241128736457 -0.31341854461104524 -0.06650240573741273"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/body_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="bodyyyy"/>
+    </visual>
+    <collision name="body_link_collision">
+      <origin rpy="0.0 0.0 0.0" xyz="0.10654241128736457 -0.31341854461104524 -0.06650240573741273"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/body_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <link name="coxa2_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="-0.0006215632456767487 0.012626070947731405 -0.042242787412724886"/>
+      <mass value="0.14864945645767189"/>
+      <inertia ixx="7.515154328244754e-05" ixy="-7.614244327200167e-07" ixz="-1.8096809455533374e-06" iyy="6.315472293591615e-05" iyz="3.301810482836051e-06" izz="4.595755580797138e-05"/>
+    </inertial>
+    <visual name="coxa2_link_visual">
+      <origin rpy="0.0 0.0 0.0" xyz="0.10663503962059025 -0.3755432050512648 -0.15797464136553507"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/coxa2_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white_grey"/>
+    </visual>
+    <collision name="coxa2_link_collision">
+      <origin rpy="0.0 0.0 0.0" xyz="0.10663503962059025 -0.3755432050512648 -0.15797464136553507"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/coxa2_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="femur2_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.003018655183022396 -0.032720087363833306 -0.02821700122031695"/>
+      <mass value="0.021024854522333044"/>
+      <inertia ixx="1.872041538323422e-05" ixy="2.0041989805014582e-08" ixz="-2.3995039334330264e-08" iyy="1.1715425471835964e-05" iyz="2.7296980670459814e-09" izz="8.503793156035733e-06"/>
+    </inertial>
+    <visual name="femur2_link_visual">
+      <origin rpy="-1.5707963267948655 -1.5707963267948963 0" xyz="-0.384329267583138 -0.0018130535694283446 0.07885901679274204"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/femur2_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="pastel_red"/>
+    </visual>
+    <collision name="femur2_link_collision">
+      <origin rpy="-1.5707963267948655 -1.5707963267948963 0" xyz="-0.384329267583138 -0.0018130535694283446 0.07885901679274204"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/femur2_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tibia2_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.00042757553440782916 -0.015904694612084287 -0.029346276142466182"/>
+      <mass value="0.088254335304573"/>
+      <inertia ixx="4.1748037540432874e-05" ixy="1.1155145134473556e-06" ixz="9.050765124938358e-08" iyy="1.8279396898974575e-05" iyz="-1.018574051708808e-06" izz="3.388535499527796e-05"/>
+    </inertial>
+    <visual name="tibia2_link_visual">
+      <origin rpy="-1.5707963267948655 -1.5707963267948963 0" xyz="-0.5294848846575261 -0.1480594051546526 0.07881901262895205"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/tibia2_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey_blue"/>
+    </visual>
+    <collision name="tibia2_link_collision">
+      <origin rpy="-1.5707963267948655 -1.5707963267948963 0" xyz="-0.5294848846575261 -0.1480594051546526 0.07881901262895205"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/tibia2_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="coxa1_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="-0.0006215616289347193 0.012626074273409449 -0.04224278741272386"/>
+      <mass value="0.1486494564576743"/>
+      <inertia ixx="7.515154328243626e-05" ixy="-7.61424432724157e-07" ixz="-1.8096809455542522e-06" iyy="6.315472293591182e-05" iyz="3.3018104828399543e-06" izz="4.595755580795425e-05"/>
+    </inertial>
+    <visual name="coxa1_link_visual">
+      <origin rpy="0.0 0.0 0.0" xyz="0.10663504123733233 -0.375543201725587 -0.15797464136553424"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/coxa1_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white_grey"/>
+    </visual>
+    <collision name="coxa1_link_collision">
+      <origin rpy="0.0 0.0 0.0" xyz="0.10663504123733233 -0.375543201725587 -0.15797464136553424"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/coxa1_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="coxa3_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="-0.0006215628496600889 0.012626069414179675 -0.042242787412724"/>
+      <mass value="0.14864945645767214"/>
+      <inertia ixx="7.515154328244927e-05" ixy="-7.614244327108213e-07" ixz="-1.8096809455536017e-06" iyy="6.315472293591355e-05" iyz="3.301810482836268e-06" izz="4.5957555808008674e-05"/>
+    </inertial>
+    <visual name="coxa3_link_visual">
+      <origin rpy="0.0 0.0 0.0" xyz="0.10663504001660666 -0.3755432065848166 -0.1579746413655343"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/coxa3_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white_grey"/>
+    </visual>
+    <collision name="coxa3_link_collision">
+      <origin rpy="0.0 0.0 0.0" xyz="0.10663504001660666 -0.3755432065848166 -0.1579746413655343"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/coxa3_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="femur1_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.003018655183022041 -0.03272009068951106 -0.0282169996035749"/>
+      <mass value="0.021024854522333044"/>
+      <inertia ixx="1.8720415383233083e-05" ixy="2.00419898040388e-08" ixz="-2.3995039335740573e-08" iyy="1.171542547184171e-05" iyz="2.7296980672738332e-09" izz="8.503793156039094e-06"/>
+    </inertial>
+    <visual name="femur1_link_visual">
+      <origin rpy="-1.5707963267948968 -1.5707963267948952 0" xyz="-0.3843292675831373 -0.0018130568950940518 0.07885901840948482"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/femur1_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="pastel_red"/>
+    </visual>
+    <collision name="femur1_link_collision">
+      <origin rpy="-1.5707963267948968 -1.5707963267948952 0" xyz="-0.3843292675831373 -0.0018130568950940518 0.07885901840948482"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/femur1_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tibia1_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0004275755344061594 -0.01590469793776192 -0.029346274525724303"/>
+      <mass value="0.08825433530457302"/>
+      <inertia ixx="4.174803754043591e-05" ixy="1.1155145134525597e-06" ixz="9.050765125415746e-08" iyy="1.8279396898917763e-05" iyz="-1.0185740517184693e-06" izz="3.3885354995245e-05"/>
+    </inertial>
+    <visual name="tibia1_link_visual">
+      <origin rpy="-1.5707963267948963 -1.570796326794895 0" xyz="-0.5294848846575324 -0.14805940848031396 0.07881901424569458"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/tibia1_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey_blue"/>
+    </visual>
+    <collision name="tibia1_link_collision">
+      <origin rpy="-1.5707963267948963 -1.570796326794895 0" xyz="-0.5294848846575324 -0.14805940848031396 0.07881901424569458"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/tibia1_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="femur3_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.00301865518302197 -0.03272008583028113 -0.028217000824300315"/>
+      <mass value="0.021024854522333044"/>
+      <inertia ixx="1.8720415383234655e-05" ixy="2.0041989804906162e-08" ixz="-2.3995039334195585e-08" iyy="1.1715425471833687e-05" iyz="2.729698066677522e-09" izz="8.503793156032263e-06"/>
+    </inertial>
+    <visual name="femur3_link_visual">
+      <origin rpy="-1.5707963267948968 -1.5707963267948952 0" xyz="-0.38432926758313757 -0.0018130520358641444 0.07885901718875915"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/femur3_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="pastel_red"/>
+    </visual>
+    <collision name="femur3_link_collision">
+      <origin rpy="-1.5707963267948968 -1.5707963267948952 0" xyz="-0.38432926758313757 -0.0018130520358641444 0.07885901718875915"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/femur3_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tibia3_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.0004275755344058041 -0.015904693078532137 -0.029346275746449546"/>
+      <mass value="0.08825433530457305"/>
+      <inertia ixx="4.174803754043331e-05" ixy="1.1155145134447535e-06" ixz="9.05076512543743e-08" iyy="1.8279396899011004e-05" iyz="-1.0185740517075189e-06" izz="3.388535499527969e-05"/>
+    </inertial>
+    <visual name="tibia3_link_visual">
+      <origin rpy="-1.5707963267948968 -1.570796326794895 0" xyz="-0.529484884657532 -0.14805940362108397 0.0788190130249692"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/tibia3_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey_blue"/>
+    </visual>
+    <collision name="tibia3_link_collision">
+      <origin rpy="-1.5707963267948968 -1.570796326794895 0" xyz="-0.529484884657532 -0.14805940362108397 0.0788190130249692"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/tibia3_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="coxa5_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="-0.00062155690327456 -0.01262607178258059 -0.04224278833082039"/>
+      <mass value="0.1486494746424425"/>
+      <inertia ixx="7.51515497103188e-05" ixy="7.614250134559934e-07" ixz="-1.8096815269171723e-06" iyy="6.315472752127169e-05" iyz="-3.301809334666818e-06" izz="4.5957560932361656e-05"/>
+    </inertial>
+    <visual name="coxa5_link_visual">
+      <origin rpy="3.141592653589793 0.0 0.0" xyz="0.10663504649257899 0.37554320337531005 -0.15797464136552886"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/coxa5_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white_grey"/>
+    </visual>
+    <collision name="coxa5_link_collision">
+      <origin rpy="3.141592653589793 0.0 0.0" xyz="0.10663504649257899 0.37554320337531005 -0.15797464136552886"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/coxa5_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="femur5_link">
+    <inertial>
+      <origin rpy="1.8726705418768793e-96 -0.0 0.0" xyz="0.003018655077457133 0.03272009744429461 -0.028217009276114192"/>
+      <mass value="0.021024855319071105"/>
+      <inertia ixx="1.8720416710902828e-05" ixy="-2.0041757747965225e-08" ixz="-2.3995353223127623e-08" iyy="1.1715426007931546e-05" iyz="-2.724865592562948e-09" izz="8.50379393597207e-06"/>
+    </inertial>
+    <visual name="femur5_link_visual">
+      <origin rpy="-1.5707963267948966 -1.5707963267948954 0" xyz="-0.38432926758313146 0.0018130552453715333 0.07885901366473128"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/femur5_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="pastel_red"/>
+    </visual>
+    <collision name="femur5_link_collision">
+      <origin rpy="-1.5707963267948966 -1.5707963267948954 0" xyz="-0.38432926758313146 0.0018130552453715333 0.07885901366473128"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/femur5_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tibia5_link">
+    <inertial>
+      <origin rpy="6.959801851910111e-79 -0.0 0.0" xyz="0.00042312682331697716 0.015904694526573167 -0.029346272346598038"/>
+      <mass value="0.08825434621070836"/>
+      <inertia ixx="4.174803276978502e-05" ixy="-1.0952842143785969e-06" ixz="9.113570318242706e-08" iyy="1.8277453230766422e-05" iyz="1.018556789639853e-06" izz="3.3883369555561677e-05"/>
+    </inertial>
+    <visual name="tibia5_link_visual">
+      <origin rpy="-1.5707963267948966 -1.5707963267948921 0" xyz="-0.5294848846575262 0.1480594068305912 0.07881900950094252"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/tibia5_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey_blue"/>
+    </visual>
+    <collision name="tibia5_link_collision">
+      <origin rpy="-1.5707963267948966 -1.5707963267948921 0" xyz="-0.5294848846575262 0.1480594068305912 0.07881900950094252"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/tibia5_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="coxa6_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="-0.0006215572992912577 -0.012626070249028709 -0.04224278833082092"/>
+      <mass value="0.148649474642438"/>
+      <inertia ixx="7.515154971031359e-05" ixy="7.614250134558003e-07" ixz="-1.8096815269169012e-06" iyy="6.315472752126908e-05" iyz="-3.3018093346685526e-06" izz="4.595756093234821e-05"/>
+    </inertial>
+    <visual name="coxa6_link_visual">
+      <origin rpy="3.141592653589793 -0.0 0.0" xyz="0.10663504609656216 0.3755432049088625 -0.1579746413655298"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/coxa6_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white_grey"/>
+    </visual>
+    <collision name="coxa6_link_collision">
+      <origin rpy="3.141592653589793 -0.0 0.0" xyz="0.10663504609656216 0.3755432049088625 -0.1579746413655298"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/coxa6_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="coxa4_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="-0.0006215585200167606 -0.012626075108258058 -0.04224278833082146"/>
+      <mass value="0.14864947464244282"/>
+      <inertia ixx="7.51515497103292e-05" ixy="7.614250134457172e-07" ixz="-1.8096815269160339e-06" iyy="6.315472752127169e-05" iyz="-3.301809334663782e-06" izz="4.595756093240741e-05"/>
+    </inertial>
+    <visual name="coxa4_link_visual">
+      <origin rpy="-3.141592653589793 0.0 0.0" xyz="0.10663504487583658 0.3755432000496323 -0.1579746413655299"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/coxa4_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="white_grey"/>
+    </visual>
+    <collision name="coxa4_link_collision">
+      <origin rpy="-3.141592653589793 0.0 0.0" xyz="0.10663504487583658 0.3755432000496323 -0.1579746413655299"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/coxa4_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="femur6_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.003018655077455925 0.032720095910742195 -0.028217009672131078"/>
+      <mass value="0.021024855319071105"/>
+      <inertia ixx="1.8720416710901798e-05" ixy="-2.0041757747368914e-08" ixz="-2.3995353224819148e-08" iyy="1.1715426007935991e-05" iyz="-2.724865592385918e-09" izz="8.503793935973154e-06"/>
+    </inertial>
+    <visual name="femur6_link_visual">
+      <origin rpy="-1.5707963267948966 -1.570796326794895 0" xyz="-0.38432926758313285 0.001813053711819208 0.07885901326871465"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/femur6_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="pastel_red"/>
+    </visual>
+    <collision name="femur6_link_collision">
+      <origin rpy="-1.5707963267948966 -1.570796326794895 0" xyz="-0.38432926758313285 0.001813053711819208 0.07885901326871465"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/femur6_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tibia6_link">
+    <inertial>
+      <origin rpy="-1.039565539417883e-78 -0.0 0.0" xyz="0.0004231268233159824 0.01590469299302077 -0.029346272742615236"/>
+      <mass value="0.08825434621070835"/>
+      <inertia ixx="4.1748032769787623e-05" ixy="-1.0952842143846684e-06" ixz="9.113570318358919e-08" iyy="1.827745323070267e-05" iyz="1.018556789650375e-06" izz="3.388336955550877e-05"/>
+    </inertial>
+    <visual name="tibia6_link_visual">
+      <origin rpy="-1.570796326794897 -1.5707963267948941 0" xyz="-0.5294848846575281 0.1480594052970392 0.07881900910492455"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/tibia6_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey_blue"/>
+    </visual>
+    <collision name="tibia6_link_collision">
+      <origin rpy="-1.570796326794897 -1.5707963267948941 0" xyz="-0.5294848846575281 0.1480594052970392 0.07881900910492455"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/tibia6_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="femur4_link">
+    <inertial>
+      <origin rpy="0.0 -0.0 0.0" xyz="0.003018655077455783 0.03272010076997166 -0.02821701089285652"/>
+      <mass value="0.021024855319071105"/>
+      <inertia ixx="1.8720416710903316e-05" ixy="-2.0041757748236275e-08" ixz="-2.399535322321995e-08" iyy="1.1715426007928402e-05" iyz="-2.7248655922232877e-09" izz="8.503793935967841e-06"/>
+    </inertial>
+    <visual name="femur4_link_visual">
+      <origin rpy="-1.5707963267948966 -1.570796326794895 0" xyz="-0.3843292675831331 0.0018130585710487068 0.07885901204798898"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/femur4_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="pastel_red"/>
+    </visual>
+    <collision name="femur4_link_collision">
+      <origin rpy="-1.5707963267948966 -1.570796326794895 0" xyz="-0.3843292675831331 0.0018130585710487068 0.07885901204798898"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/femur4_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="tibia4_link">
+    <inertial>
+      <origin rpy="-2.6423935824712417e-78 -0.0 0.0" xyz="0.00042312682331544947 0.01590469785225016 -0.029346273963340407"/>
+      <mass value="0.08825434621070835"/>
+      <inertia ixx="4.1748032769784154e-05" ixy="-1.095284214375561e-06" ixz="9.113570318434813e-08" iyy="1.8277453230804586e-05" iyz="1.0185567896390992e-06" izz="3.388336955555734e-05"/>
+    </inertial>
+    <visual name="tibia4_link_visual">
+      <origin rpy="-1.5707963267948963 -1.5707963267948941 0" xyz="-0.5294848846575279 0.14805941015626833 0.07881900788419918"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/tibia4_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey_blue"/>
+    </visual>
+    <collision name="tibia4_link_collision">
+      <origin rpy="-1.5707963267948963 -1.5707963267948941 0" xyz="-0.5294848846575279 0.14805941015626833 0.07881900788419918"/>
+      <geometry>
+        <mesh filename="package://hectarus_sim/description/meshes/tibia4_link.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="base_link">
+    </link>
+  <!-- <link name="end_effector1">
+    <visual name = "end_effector1_visual">
+      <origin rpy = "0 0 0" xyz = "0 0 0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+      <material name = "grey_blue"/>
+    </visual>
+    <collision name = "end_effector1_collision">
+      <origin rpy = "0 0 0" xyz = "0 0 0"/>
+      <geometry>
+        <box size="0.001 0.001 0.001"/>
+      </geometry>
+    </collision>
+  </link> -->
+  <link name="end_effector1">
+    </link>
+  <link name="end_effector2">
+    </link>
+  <link name="end_effector3">
+    </link>
+  <link name="end_effector4">
+    </link>
+  <link name="end_effector5">
+    </link>
+  <link name="end_effector6">
+    </link>
+  <joint name="body_coxa1_joint" type="revolute">
+    <origin rpy="0.0 -0.0 -0.785398163" xyz="0.05465389999999999 0.05451324 0.07799999"/>
+    <parent link="body_link"/>
+    <child link="coxa1_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="body_coxa2_joint" type="revolute">
+    <origin rpy="0.0 -0.0 0.0" xyz="2.5030000000000053e-05 0.07714125999999999 0.07799999"/>
+    <parent link="body_link"/>
+    <child link="coxa2_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="body_coxa3_joint" type="revolute">
+    <origin rpy="0.0 -0.0 0.785398163" xyz="-0.05460384000000001 0.05451324 0.07799999"/>
+    <parent link="body_link"/>
+    <child link="coxa3_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="body_coxa4_joint" type="revolute">
+    <origin rpy="0.0 -0.0 -0.785398163" xyz="-0.05460384000000001 -0.0547445 0.07799999"/>
+    <parent link="body_link"/>
+    <child link="coxa4_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="body_coxa5_joint" type="revolute">
+    <origin rpy="0.0 -0.0 0.0" xyz="2.5030000000000053e-05 -0.07737252000000001 0.07799999"/>
+    <parent link="body_link"/>
+    <child link="coxa5_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="body_coxa6_joint" type="revolute">
+    <origin rpy="0.0 -0.0 0.785398163" xyz="0.05465389999999999 -0.0547445 0.07799999"/>
+    <parent link="body_link"/>
+    <child link="coxa6_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="coxa1_femur1_joint" type="revolute">
+    <origin rpy="-3.141592653589793 -1.5707963267948966 0" xyz="0.02772601000000001 0.025051750000000005 -0.05545002999999998"/>
+    <parent link="coxa1_link"/>
+    <child link="femur1_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="coxa2_femur2_joint" type="revolute">
+    <origin rpy="-3.141592653589793 -1.5707963267948966 0" xyz="0.027726010000000002 0.025051750000000005 -0.05545002999999998"/>
+    <parent link="coxa2_link"/>
+    <child link="femur2_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="coxa3_femur3_joint" type="revolute">
+    <origin rpy="-3.141592653589793 -1.5707963267948966 0" xyz="0.02772601 0.025051750000000005 -0.05545002999999998"/>
+    <parent link="coxa3_link"/>
+    <child link="femur3_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="coxa4_femur4_joint" type="revolute">
+    <origin rpy="-3.141592653589793 -1.5707963267948966 0" xyz="0.02772602 -0.025051750000000005 -0.05545002999999998"/>
+    <parent link="coxa4_link"/>
+    <child link="femur4_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="coxa5_femur5_joint" type="revolute">
+    <origin rpy="-3.141592653589793 -1.5707963267948966 0" xyz="0.02772602 -0.025051750000000005 -0.05545002999999998"/>
+    <parent link="coxa5_link"/>
+    <child link="femur5_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="coxa6_femur6_joint" type="revolute">
+    <origin rpy="-3.141592653589793 -1.5707963267948966 0" xyz="0.02772602 -0.025051750000000005 -0.05545002999999998"/>
+    <parent link="coxa6_link"/>
+    <child link="femur6_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="femur1_tibia1_joint" type="revolute">
+    <origin rpy="0.0 0.0 -1.5707963267948966" xyz="0.0 -0.06499573000000002 0.0"/>
+    <parent link="femur1_link"/>
+    <child link="tibia1_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="femur2_tibia2_joint" type="revolute">
+    <origin rpy="0.0 0.0 -1.5707963267948966" xyz="0.0 -0.06499573000000002 0.0"/>
+    <parent link="femur2_link"/>
+    <child link="tibia2_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="femur3_tibia3_joint" type="revolute">
+    <origin rpy="0.0 0.0 -1.5707963267948966" xyz="0.0 -0.06499573000000002 0.0"/>
+    <parent link="femur3_link"/>
+    <child link="tibia3_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="femur4_tibia4_joint" type="revolute">
+    <origin rpy="0.0 0.0 1.5707963267948966" xyz="0.0 0.06499573000000002 0.0"/>
+    <parent link="femur4_link"/>
+    <child link="tibia4_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="femur5_tibia5_joint" type="revolute">
+    <origin rpy="0.0 0.0 1.5707963267948966" xyz="0.0 0.06499573000000002 0.0"/>
+    <parent link="femur5_link"/>
+    <child link="tibia5_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="femur6_tibia6_joint" type="revolute">
+    <origin rpy="0.0 0.0 1.5707963267948966" xyz="0.0 0.06499573000000002 0.0"/>
+    <parent link="femur6_link"/>
+    <child link="tibia6_link"/>
+    <axis xyz="0.0 0.0 1.0"/>
+    <limit effort="100" lower="-3.141592653589793" upper="3.141592653589793" velocity="100"/>
+  </joint>
+  <joint name="end_effector1_frame" type="fixed">
+    <origin rpy="0.0 0 0" xyz="-0.0030784699999999976 -0.07429965000000001 -0.027700130000000007"/>
+    <parent link="tibia1_link"/>
+    <child link="end_effector1"/>
+  </joint>
+  <joint name="end_effector2_frame" type="fixed">
+    <origin rpy="-0.0 0 0" xyz="-0.0030784700000000068 -0.07429965000000001 -0.02770013"/>
+    <parent link="tibia2_link"/>
+    <child link="end_effector2"/>
+  </joint>
+  <joint name="end_effector3_frame" type="fixed">
+    <origin rpy="0.0 0 0" xyz="-0.003078460000000005 -0.07429965000000001 0.027700129999999996"/>
+    <parent link="tibia3_link"/>
+    <child link="end_effector3"/>
+  </joint>
+  <joint name="end_effector4_frame" type="fixed">
+    <origin rpy="0.0 0 0" xyz="0.002678800000000026 0.07429965000000004 -0.02770013"/>
+    <parent link="tibia4_link"/>
+    <child link="end_effector4"/>
+  </joint>
+  <joint name="end_effector5_frame" type="fixed">
+    <origin rpy="0.0 0 0" xyz="0.002678800000000034 0.074299650000000045 -0.027700129999999996"/>
+    <parent link="tibia5_link"/>
+    <child link="end_effector5"/>
+  </joint>
+  <joint name="end_effector6_frame" type="fixed">
+    <origin rpy="0.0 0 0" xyz="0.002678800000000026 0.07429965000000004 -0.02770012999999999"/>
+    <parent link="tibia6_link"/>
+    <child link="end_effector6"/>
+  </joint>
+  <joint name="base_body_joint" type="fixed">
+    <origin rpy="0.0 0.0 0.0" xyz="0.0 0.0 0.0"/>
+    <parent link="base_link"/>
+    <child link="body_link"/>
+  </joint>  
+
+</robot>

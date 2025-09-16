@@ -1,0 +1,410 @@
+<?xml version="1.0" ?>
+<robot name="hectarus" xmlns:xacro="http://www.ros.org/wiki/xacro">
+<xacro:include filename="$(find hectarus_sim)/description/hectarus_core.xacro" />
+  <gazebo>
+    <plugin filename="gz_ros2_control-system" name="gz_ros2_control::GazeboSimROS2ControlPlugin">
+      <parameters>$(find hectarus_sim)/config/hectarus_controller.yaml</parameters>
+    </plugin>
+    <!-- <plugin
+        filename="gz-sim-pose-publisher-system"
+        name="gz::sim::systems::PosePublisher">
+        <publish_link_pose>true</publish_link_pose>1
+        <use_pose_vector_msg>true</use_pose_vector_msg>
+        <static_publisher>true</static_publisher>
+        <static_update_frequency>1</static_update_frequency>
+    </plugin> -->
+    <plugin
+      filename="gz-sim-user-commands-system"
+      name="gz::sim::systems::UserCommands">
+    </plugin>
+    <plugin filename="gz-sim-imu-system"
+        name="gz::sim::systems::Imu">
+    </plugin>
+    <plugin filename="gz-sim-forcetorque-system"
+        name="gz::sim::systems::ForceTorque">
+    </plugin>
+    <plugin filename="gz-sim-contact-system"
+        name="gz::sim::systems::Contact">
+    </plugin>
+  </gazebo>
+
+  <gazebo reference="body_link">
+    <sensor name="imu_link" type="imu">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>imu</topic>
+    </sensor>
+  </gazebo>
+  
+  <gazebo reference="body_coxa1_joint">
+    <sensor name="coxa1_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>coxa1_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="coxa1_femur1_joint">
+    <sensor name="femur1_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>femur1_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="femur1_tibia1_joint">
+    <sensor name="tibia1_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>tibia1_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="body_coxa2_joint">
+    <sensor name="coxa2_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>coxa2_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="coxa2_femur2_joint">
+    <sensor name="femur2_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>femur2_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="femur2_tibia2_joint">
+    <sensor name="tibia2_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>tibia2_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="body_coxa3_joint">
+    <sensor name="coxa3_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>coxa3_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="coxa3_femur3_joint">
+    <sensor name="femur3_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>femur3_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="femur3_tibia3_joint">
+    <sensor name="tibia3_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>tibia3_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="body_coxa4_joint">
+    <sensor name="coxa4_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>coxa4_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="coxa4_femur4_joint">
+    <sensor name="femur4_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>femur4_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="femur4_tibia4_joint">
+    <sensor name="tibia4_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>tibia4_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="body_coxa5_joint">
+    <sensor name="coxa5_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>coxa5_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="coxa5_femur5_joint">
+    <sensor name="femur5_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>femur5_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="femur5_tibia5_joint">
+    <sensor name="tibia5_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>tibia5_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="body_coxa6_joint">
+    <sensor name="coxa6_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>coxa6_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="coxa6_femur6_joint">
+    <sensor name="femur6_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>femur6_torque</topic>
+    </sensor>
+  </gazebo>
+
+  <gazebo reference="femur6_tibia6_joint">
+    <sensor name="tibia6_torque" type="force_torque">
+      <always_on>1</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>tibia6_torque</topic>
+    </sensor>
+  </gazebo>
+
+
+
+
+  <ros2_control name="GazeboSystem" type="system">
+    <hardware>
+      <plugin>gz_ros2_control/GazeboSimSystem</plugin>
+    </hardware>
+    <joint name="body_coxa1_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="body_coxa2_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="body_coxa3_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="body_coxa4_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="body_coxa5_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="body_coxa6_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="coxa1_femur1_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="coxa2_femur2_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="coxa3_femur3_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="coxa4_femur4_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="coxa5_femur5_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="coxa6_femur6_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="femur1_tibia1_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="femur2_tibia2_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="femur3_tibia3_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="femur4_tibia4_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="femur5_tibia5_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+    <joint name="femur6_tibia6_joint">
+      <command_interface name="position">
+        <param name="min">-3.14</param>
+        <param name="max">3.14</param>
+      </command_interface>
+      <state_interface name="position">
+        <param name="initial_value">0.0</param>
+      </state_interface>
+      <state_interface name="velocity"/>
+      <state_interface name="effort"/>
+    </joint>
+  </ros2_control>
+  
+
+</robot>
