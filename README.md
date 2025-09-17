@@ -17,11 +17,11 @@ This project features a real-time teleoperation using keyboard input, torque mon
 
 ## Installation
 1. Clone the repository
-```
+```ruby
 git clone https://github.com/VincentRicardo/hectarus_simulation.git
 ```
 2. Build the workspace
-```
+```ruby
 cd ~/ros2_ws
 colcon build
 source install/setup.bash
