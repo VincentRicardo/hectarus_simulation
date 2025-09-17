@@ -44,4 +44,7 @@ ros2 launch hectarus_controller torque.launch.py
 ```
 5. Activate Imu Self-Stabilization
 To activate self-stabilization using IMU, open another terminal and set use_imu parameter to true
+```ruby
+ros2 param set /gazebo_joint_publisher use_imu true
+```
 
