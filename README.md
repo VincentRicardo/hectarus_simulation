@@ -13,7 +13,7 @@ This project features a real-time teleoperation using keyboard input, torque mon
 ### Basic IMU Integration
 
 
-##Prerequisites
+## Prerequisites
 
 ## Installation
 1. Clone the repository
@@ -29,6 +29,19 @@ source install/setup.bash
 
 ## Usage
 1. Launch the Simulation
+```ruby
+ros2 launch hectarus_controller controller.launch.py
+```
 2. Control the Robot
-3. Monitor Joint Torque
-4. Activate Imu Self-Stabilization
+Open another terminal and run the keyboard teleoperation node:
+```ruby
+ros2 run hectarus_controller hectarus_teleop_key
+``` 
+4. Monitor Joint Torque
+Open another terminal and run the torque monitoring to monitor each joint torque
+```ruby
+ros2 launch hectarus_controller torque.launch.py
+```
+5. Activate Imu Self-Stabilization
+To activate self-stabilization using IMU, open another terminal and set use_imu parameter to true
+
