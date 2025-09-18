@@ -9,8 +9,7 @@ This project features a real-time teleoperation using keyboard input, torque mon
 ### 3D Hexapod Model
 A detailed Xacro-based 3D model of a six-legged robot generated and modified by fusion-to-urdf plugin. 
 - Each leg is modeled with 3 joints (3 DOF) representing a spider leg.
-![](/asset/walking_rviz.gif)
-<img src="/asset/walking_rviz.gif" width="250">
+<img src="/asset/walking_rviz.gif" width="500">
 
 - The model includes [collision meshes and visual meshes](https://github.com/VincentRicardo/hectarus_simulation/blob/4ed12e8d3b8fdac9c984391c6abc5447614acf5c/ros_ws/src/hectarus_sim/description/hectarus_core.xacro#L21C5-L33C17) for realistic simulation in Gazebo
 
@@ -24,7 +23,7 @@ The supported motions are:
 - Rotational movement (turn left and right) with A and D for default turning degree and Q and E for smaller turning degree
 
 This features include controlling robot forward and strafe distance with arrow keyboard.
-![](/asset/teleopkey.png)
+<img src="/asset/teleopkey.png" width="500">
 
 ### Torque Monitoring
 Real-time monitoring of each joint torque using torque sensor in gazebo plugin to measures joint torque values during operation.
@@ -33,13 +32,13 @@ Real-time monitoring of each joint torque using torque sensor in gazebo plugin t
   1. Physical hardware torque needed to implement the robot into a hardware
   2. Optimizing gait design for energy efficiency
   3. Identifying potential failure points in hardware design
-![](/asset/torque_monitoring.webm)
+<img src="/asset/torque_monitoring.webm" width="500">
 
 ### Basic IMU Integration for Self-Stabilization
 An Inertial Measurement Unit (IMU) is integrated into the simulation using gazebo sensor plugin to track the robot's roll, pitch and yaw value.
 - The IMU is implemented until static self-stabilization.
 - When the parameter "use_imu" is true, the robot automatically adjusts its leg heights to maintain its posture based on its terrain.
-![](/asset/self_stabilization.gif)
+<img src="/asset/self_stabilization.gif" width="500">
 
 ## Flaw
 
