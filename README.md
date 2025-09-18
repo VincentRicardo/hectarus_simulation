@@ -25,7 +25,7 @@ This features include controlling robot forward and strafe distance with arrow k
 ![](/asset/teleopkey.png)
 
 ### Torque Monitoring
-Real-time monitoring of each joint torque values during operation.
+Real-time monitoring of each joint torque using torque sensor in gazebo plugin to measures joint torque values during operation.
 - Simulates the physical load experienced by each actuator as the robot moves.
 - This torque monitoring can be used to analyze:
   1. Physical hardware torque needed to implement the robot into a hardware
@@ -33,7 +33,11 @@ Real-time monitoring of each joint torque values during operation.
   3. Identifying potential failure points in hardware design
 ![](/asset/torque_monitoring.webm)
 
-### Basic IMU Integration
+### Basic IMU Integration for Self-Stabilization
+An Inertial Measurement Unit (IMU) is integrated into the simulation using gazebo sensor plugin to track the robot's roll, pitch and yaw value.
+- The IMU is implemented until static self-stabilization.
+- When the parameter "use_imu" is true, the robot automatically adjusts its leg heights to maintain its posture based on its terrain.
+![](/asset/self_stabilization.gif)
 
 ## Flaw
 
