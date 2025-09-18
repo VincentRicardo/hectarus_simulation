@@ -15,6 +15,7 @@ A detailed Xacro-based 3D model of a six-legged robot generated and modified by 
 
 ### Basic IMU Integration
 
+## Flaw
 
 ## Prerequisites
 The ROS2, colcon and Gazebo needed to be installed on the PC to run the program.
