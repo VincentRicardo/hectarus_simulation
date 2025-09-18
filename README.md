@@ -31,7 +31,7 @@ Real-time monitoring of each joint torque values during operation.
   1. Physical hardware torque needed to implement the robot into a hardware
   2. Optimizing gait design for energy efficiency
   3. Identifying potential failure points in hardware design
-![](/asset/monitoring_torque.webm)
+![](/asset/torque_monitoring.webm)
 
 ### Basic IMU Integration
 
