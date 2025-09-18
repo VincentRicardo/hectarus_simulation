@@ -1,6 +1,8 @@
 # Six Legged Robot - Hectarus - Simulation with ROS2 Jazzy and Gazebo Harmonic
 A ROS2-based simulation of a six-legged (hexapod) robot using Gazebo Harmonic, built for research and learning in robotics and mechatronics.
 
+The main purpose of this project is to analyze and simulated the best walking pattern for hexapod robot either flat terrain or uneven terrain such as stairs.
+
 This project features a real-time teleoperation using keyboard input, torque monitoring for each joint, and IMU-based static self-stabilization.
 
 ## Features
@@ -11,6 +13,14 @@ A detailed Xacro-based 3D model of a six-legged robot generated and modified by 
 - The model includes [collision meshes and visual meshes](https://github.com/VincentRicardo/hectarus_simulation/blob/4ed12e8d3b8fdac9c984391c6abc5447614acf5c/ros_ws/src/hectarus_sim/description/hectarus_core.xacro#L21C5-L33C17) for realistic simulation in Gazebo
 
 ### Keyboard Teleoperation
+The robot can be controlled in real-time using a simple keyboard interface with tripod gait implemented.
+
+The supported motions are:
+- Forward / Backward movement with W and S key
+- Left / Right Strafing with Z and C key
+- Rotational movement (turn left and right) with A and D for default turning degree and Q and E for smaller turning degree
+
+This features include 
 
 ### Torque Monitoring
 
