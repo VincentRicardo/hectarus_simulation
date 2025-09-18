@@ -7,7 +7,7 @@ This project features a real-time teleoperation using keyboard input, torque mon
 ### 3D Hexapod Model
 A detailed Xacro-based 3D model of a six-legged robot generated and modified by fusion-to-urdf plugin. 
 - Each leg is modeled with 3 joints (3 DOF) representing a spider leg.
-[Short Video](/asset/walking_rviz.gif)
+![](/asset/walking_rviz.gif)
 - The model includes [collision meshes and visual meshes](https://github.com/VincentRicardo/hectarus_simulation/blob/4ed12e8d3b8fdac9c984391c6abc5447614acf5c/ros_ws/src/hectarus_sim/description/hectarus_core.xacro#L21C5-L33C17) for realistic simulation in Gazebo
 
 ### Keyboard Teleoperation
