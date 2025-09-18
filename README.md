@@ -1,5 +1,5 @@
 # Six Legged Robot - Hectarus - Simulation with ROS2 Jazzy and Gazebo Harmonic
-A ROS2-based simulation of a six-legged (hexapod) robot using Gazebo Harmonic, built for research and learning in robotics and mechatronics.
+A ROS2-based simulation of a six-legged (hexapod) robot using Gazebo Harmonic with visualization in RViz, built for research and learning in robotics and mechatronics.
 
 The main purpose of this project is to analyze and simulated the best walking pattern for hexapod robot either flat terrain or uneven terrain such as stairs.
 
@@ -25,6 +25,13 @@ This features include controlling robot forward and strafe distance with arrow k
 ![](/asset/teleopkey.png)
 
 ### Torque Monitoring
+Real-time monitoring of each joint torque values during operation.
+- Simulates the physical load experienced by each actuator as the robot moves.
+- This torque monitoring can be used to analyze:
+  1. Physical hardware torque needed to implement the robot into a hardware
+  2. Optimizing gait design for energy efficiency
+  3. Identifying potential failure points in hardware design
+![](/asset/monitoring_torque.webm)
 
 ### Basic IMU Integration
 
