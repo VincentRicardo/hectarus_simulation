@@ -16,7 +16,8 @@ A detailed Xacro-based 3D model of a six-legged robot generated and modified by 
 The robot can be controlled in real-time using a simple keyboard interface with tripod gait implemented.
 
 The supported motions are:
-- Forward / Backward movement with W and S key
+- Forward / Backward movement with W and X key
+- Stop with S key
 - Left / Right Strafing with Z and C key
 - Rotational movement (turn left and right) with A and D for default turning degree and Q and E for smaller turning degree
 
