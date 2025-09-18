@@ -9,7 +9,7 @@ This project features a real-time teleoperation using keyboard input, torque mon
 ### 3D Hexapod Model
 A detailed Xacro-based 3D model of a six-legged robot generated and modified by fusion-to-urdf plugin. 
 - Each leg is modeled with 3 joints (3 DOF) representing a spider leg.
-![](/asset/walking_rviz.gif)
+![](/asset/walking_rviz.gif =500x500)
 - The model includes [collision meshes and visual meshes](https://github.com/VincentRicardo/hectarus_simulation/blob/4ed12e8d3b8fdac9c984391c6abc5447614acf5c/ros_ws/src/hectarus_sim/description/hectarus_core.xacro#L21C5-L33C17) for realistic simulation in Gazebo
 
 ### Keyboard Teleoperation
@@ -22,7 +22,7 @@ The supported motions are:
 - Rotational movement (turn left and right) with A and D for default turning degree and Q and E for smaller turning degree
 
 This features include controlling robot forward and strafe distance with arrow keyboard.
-![](/asset/teleopkey.png)
+![](/asset/teleopkey.png = 500x500)
 
 ### Torque Monitoring
 Real-time monitoring of each joint torque using torque sensor in gazebo plugin to measures joint torque values during operation.
@@ -37,7 +37,7 @@ Real-time monitoring of each joint torque using torque sensor in gazebo plugin t
 An Inertial Measurement Unit (IMU) is integrated into the simulation using gazebo sensor plugin to track the robot's roll, pitch and yaw value.
 - The IMU is implemented until static self-stabilization.
 - When the parameter "use_imu" is true, the robot automatically adjusts its leg heights to maintain its posture based on its terrain.
-![](/asset/self_stabilization.gif)
+![](/asset/self_stabilization.gif = 500x500)
 
 ## Flaw
 
