@@ -20,7 +20,8 @@ The supported motions are:
 - Left / Right Strafing with Z and C key
 - Rotational movement (turn left and right) with A and D for default turning degree and Q and E for smaller turning degree
 
-This features include 
+This features include controlling robot forward and strafe distance with arrow keyboard.
+
 
 ### Torque Monitoring
 
