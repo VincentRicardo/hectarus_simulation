@@ -41,7 +41,12 @@ An Inertial Measurement Unit (IMU) is integrated into the simulation using gazeb
 <img src="/asset/self_stabilization.gif" width="500">
 
 ## Flaw
+The developed project has some flaw in its developed such as
+1. The IMU features only developed until self-stabilization, for dynamic terrain in walking process is not implemented well.
+2. The world developed in the simulation is only using a stairs, not included for other uneven terrain for example broken path, rocky road, mud, etc.
+3. The URDF/Xacro model cant be modified freely because of some bug after using a fusion-to-urdf plugin. For example, the joint origin has some gimbal lock that only can move 2 axis instead of 3 axis.
 
+# Installation
 ## Prerequisites
 The ROS2, colcon and Gazebo needed to be installed on the PC to run the program.
 1. The ROS2 Jazzy can be downloaded in this [link](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html) tutorial
@@ -73,13 +78,12 @@ Open another terminal and run the keyboard teleoperation node:
 ```ruby
 ros2 run hectarus_controller hectarus_teleop_key
 ```
-The robot then can be controller with W, A, S, D, to move forward, turn left and right and move backward. Q and E to turn left and right the robot with smaller degree. Z and C controlling the robot to move strafe. 
-4. Monitor Joint Torque
+3. Monitor Joint Torque
 Open another terminal and run the torque monitoring to monitor each joint torque
 ```ruby
 ros2 launch hectarus_controller torque.launch.py
 ```
-5. Activate Imu Self-Stabilization
+4. Activate Imu Self-Stabilization
 To activate self-stabilization using IMU, open another terminal and set use_imu parameter to true
 ```ruby
 ros2 param set /gazebo_joint_publisher use_imu true
