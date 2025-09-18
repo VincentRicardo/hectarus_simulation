@@ -21,7 +21,7 @@ The supported motions are:
 - Rotational movement (turn left and right) with A and D for default turning degree and Q and E for smaller turning degree
 
 This features include controlling robot forward and strafe distance with arrow keyboard.
-
+![](/asset/teleopkey.png)
 
 ### Torque Monitoring
 
