@@ -15,12 +15,12 @@ This project features a real-time teleoperation using keyboard input, torque mon
 
 ## Prerequisites
 The ROS2, colcon and Gazebo needed to be installed on the PC to run the program.
-1. The ROS2 Jazzy can be downloaded in this tutorial [link](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
+1. The ROS2 Jazzy can be downloaded in this [link](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html) tutorial
 2. The colcon can downloaded with this script
 ```ruby
 sudo apt install python3-colcon-common-extensions
 ```
-3. The Gazebo Harmonic can be downloaded in this tutorial [link](https://gazebosim.org/docs/harmonic/install_ubuntu/)
+3. The Gazebo Harmonic can be downloaded in this [link](https://gazebosim.org/docs/harmonic/install_ubuntu/) tutorial
 
 ## Installation
 1. Clone the repository
@@ -43,7 +43,8 @@ ros2 launch hectarus_controller controller.launch.py
 Open another terminal and run the keyboard teleoperation node:
 ```ruby
 ros2 run hectarus_controller hectarus_teleop_key
-``` 
+```
+The robot then can be controller with W, A, S, D, to move forward, turn left and right and move backward. Q and E to turn left and right the robot with smaller degree. Z and C controlling the robot to move strafe. 
 4. Monitor Joint Torque
 Open another terminal and run the torque monitoring to monitor each joint torque
 ```ruby
