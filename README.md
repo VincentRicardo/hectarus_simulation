@@ -14,6 +14,13 @@ This project features a real-time teleoperation using keyboard input, torque mon
 
 
 ## Prerequisites
+The ROS2, colcon and Gazebo needed to be installed on the PC to run the program.
+1. The ROS2 Jazzy can be downloaded in this tutorial [link](https://docs.ros.org/en/jazzy/Installation/Ubuntu-Install-Debs.html)
+2. The colcon can downloaded with this script
+```ruby
+sudo apt install python3-colcon-common-extensions
+```
+3. The Gazebo Harmonic can be downloaded in this tutorial [link](https://gazebosim.org/docs/harmonic/install_ubuntu/)
 
 ## Installation
 1. Clone the repository
