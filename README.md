@@ -1,5 +1,5 @@
 # Six Legged Robot - Hectarus - Simulation with ROS2 Jazzy and Gazebo Harmonic
-A ROS2-based simulation of a six-legged (hexapod) robot using Gazebo Harmonic with visualization in RViz, built for research and learning in robotics and mechatronics.
+A ROS2-based simulation of a six-legged (hexapod) robot using Gazebo Harmonic with visualization in RViz, built for research and learning in robotics and simulation.
 
 The main purpose of this project is to analyze and simulated the best walking pattern for hexapod robot either flat terrain or uneven terrain such as stairs.
 
