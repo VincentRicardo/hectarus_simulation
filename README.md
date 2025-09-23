@@ -32,7 +32,7 @@ Real-time monitoring of each joint torque using torque sensor in gazebo plugin t
   1. Physical hardware torque needed to implement the robot into a hardware
   2. Optimizing gait design for energy efficiency
   3. Identifying potential failure points in hardware design
-<img src="/asset/torque_monitoring.webm" width="500">
+<img src="/asset/torque_monitoring.png" width="500">
 
 ### Basic IMU Integration for Self-Stabilization
 An Inertial Measurement Unit (IMU) is integrated into the simulation using gazebo sensor plugin to track the robot's roll, pitch and yaw value.
